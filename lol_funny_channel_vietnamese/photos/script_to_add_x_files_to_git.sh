@@ -2,12 +2,13 @@
 
 files_per_batch=300
 
-set -- s*
+set -- p*
 
 n=0
 N=0
 
 for filename do
+    echo $filename
     git add $filename
     n=$(( n + 1 ))
     N=$(($n%$files_per_batch))
